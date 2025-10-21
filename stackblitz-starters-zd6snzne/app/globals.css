@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🌸 Basisfarben – hell, freundlich und klar */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+  --accent-pink: #db2777;
+  --soft-pink: #fce7f3;
+  --card-bg: #fff;
+  --shadow-color: rgba(219, 39, 119, 0.2);
+}
+
+/* 🚫 Darkmode ausschalten – immer hell & klar */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 255, 255, 255;
+  }
+}
+
+/* 🌸 Grundlayout */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      var(--soft-pink),
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Playfair Display', 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 4rem;
+}
+
+/* 💖 Schriftfarbe & Textstandard */
+body,
+input,
+button,
+select,
+textarea {
+  color: #222 !important;
+  font-family: 'Playfair Display', 'Segoe UI', Roboto, sans-serif;
+}
+
+/* 🎵 Überschriften mit königlichem Pink */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--accent-pink) !important;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+/* ✨ Karten, Panels & Elemente */
+div,
+section,
+article {
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+/* 🌺 Buttons */
+button {
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  background: var(--accent-pink);
+  color: #fff !important;
+  border: none;
+  box-shadow: 0 2px 6px var(--shadow-color);
+}
+
+button:hover {
+  background: #be185d;
+  transform: scale(1.03);
+}
+
+/* 🩰 Inputs & Textfelder */
+input,
+select,
+textarea {
+  border: 1px solid #f9a8d4;
+  background-color: var(--card-bg);
+  padding: 0.5rem;
+  box-shadow: 0 2px 4px rgba(219, 39, 119, 0.1);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-pink);
+  box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.2);
+}
+
+/* 🌸 Animierte Übergänge für alles */
+* {
+  transition: all 0.3s ease;
+}
+
+/* 🌙 Sanfter Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🩵 Tabellen & Container harmonisch rund */
+.container,
+.card {
+  border-radius: 1.25rem;
+  background-color: var(--card-bg);
+  box-shadow: 0 6px 16px var(--shadow-color);
+}
+
+/* 🎼 Kleine Akzente */
+a {
+  color: var(--accent-pink);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 💫 Footer oder Abschluss */
+footer {
+  text-align: center;
+  color: #666;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+}
